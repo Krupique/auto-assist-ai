@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "auto-assist-ai"
+version = "0.1.0"
+description = "AutoAssistAI: An AI-powered chatbot revolutionizing car sales with smart, context-aware assistance."
+authors = ["Krupique <krupique@outlook.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+torch = { version = "^2.5.0", source = "pytorch" }
+torchvision = {version = "^0.20.1+cu118", source = "pytorch"}
+torchaudio = {version = "^2.5.1+cu118", source = "pytorch"}
+ipykernel = "^6.29.5"
+evaluate = "^0.4.3"
+transformers = "^4.48.1"
+bitsandbytes = "^0.45.1"
+peft = "^0.14.0"
+datasets = "^3.2.0"
+
+
+[[tool.poetry.source]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cu118"
+priority = "explicit"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
